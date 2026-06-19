@@ -1,0 +1,15 @@
+<rotate xmlns:android="http://schemas.android.com/apk/res/android"
+    android:fromDegrees="270"
+    android:toDegrees="270"
+    android:pivotX="50%"
+    android:pivotY="50%">
+    <shape android:shape="ring"
+        android:innerRadiusRatio="3.2"
+        android:thickness="10dp"
+        android:useLevel="true">
+        <solid android:color="#993C1D" />
+    </shape>
+</rotate>
+
+    <!-- Used as the foreground progress ring - color changes based on score:
+            Safe = #0F6E56 (teal), Moderate = #BA7517 (amber), High/Dangerous = #993C1D (coral) -->

@@ -1,0 +1,444 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4F7F6">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <!-- ===== TITLE ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Connect Device"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#1A3A50"
+                android:layout_marginBottom="4dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Pair your EHM device with this app"
+                android:textSize="13sp"
+                android:textColor="#9AA5A3"
+                android:layout_marginBottom="20dp" />
+
+            <!-- ===== STATE A: NO DEVICE CONNECTED (illustration card) ===== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:padding="32dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📡"
+                        android:textSize="48sp"
+                        android:layout_marginBottom="12dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No device connected"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A3A50"
+                        android:layout_marginBottom="6dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Power on your EHM device to begin setup"
+                        android:textSize="13sp"
+                        android:textColor="#9AA5A3"
+                        android:gravity="center" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ===== SETUP STEPS CARD ===== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Setup Steps"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A3A50"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- Step 1 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="14dp">
+
+                        <TextView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:text="1"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:background="@drawable/bg_step_circle_done"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Power on the device"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="#1A3A50" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="The OLED screen will show \"
+                                android:textSize="12sp"
+                                android:textColor="#9AA5A3" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Step 2 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="14dp">
+
+                        <TextView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:text="2"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#FFFFFF"
+                            android:background="@drawable/bg_step_circle_active"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Connect to device WiFi"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="#1A3A50" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="In your phone's WiFi settings, join \"
+                                android:textSize="12sp"
+                                android:textColor="#9AA5A3" />
+
+                            <!-- Open WiFi settings button -->
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Open WiFi Settings →"
+                                android:textSize="12sp"
+                                android:textStyle="bold"
+                                android:textColor="#1A6B8A"
+                                android:layout_marginTop="6dp"
+                                android:padding="4dp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <!-- Step 3 -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="0dp">
+
+                        <TextView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:text="3"
+                            android:textSize="13sp"
+                            android:textStyle="bold"
+                            android:textColor="#9AA5A3"
+                            android:background="@drawable/bg_step_circle_pending"
+                            android:gravity="center"
+                            android:layout_marginEnd="12dp" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Enter your home WiFi"
+                                android:textSize="13sp"
+                                android:textStyle="bold"
+                                android:textColor="#1A3A50" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="The app will send your WiFi name and password to the device"
+                                android:textSize="12sp"
+                                android:textColor="#9AA5A3" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ===== WIFI CREDENTIALS FORM (shown after step 2) ===== -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="18dp"
+                app:cardElevation="2dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Home WiFi Details"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        android:textColor="#1A3A50"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- WiFi Name field -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WiFi Network Name (SSID)"
+                        android:textSize="12sp"
+                        android:textColor="#5B6664"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/wifiSsidInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input_field"
+                        android:padding="14dp"
+                        android:hint="Home_Network_5G"
+                        android:textSize="14sp"
+                        android:textColor="#1A3A50"
+                        android:textColorHint="#C0C8C7"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- WiFi Password field -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="WiFi Password"
+                        android:textSize="12sp"
+                        android:textColor="#5B6664"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/wifiPasswordInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input_field"
+                        android:padding="14dp"
+                        android:hint="••••••••"
+                        android:inputType="textPassword"
+                        android:textSize="14sp"
+                        android:textColor="#1A3A50"
+                        android:textColorHint="#C0C8C7"
+                        android:layout_marginBottom="14dp" />
+
+                    <!-- Device Name field (optional) -->
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Name this device (optional)"
+                        android:textSize="12sp"
+                        android:textColor="#5B6664"
+                        android:layout_marginBottom="6dp" />
+
+                    <EditText
+                        android:id="@+id/deviceNameInput"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_input_field"
+                        android:padding="14dp"
+                        android:hint="e.g. Bedroom, Office, Living Room"
+                        android:textSize="14sp"
+                        android:textColor="#1A3A50"
+                        android:textColorHint="#C0C8C7" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- ===== SEND TO DEVICE BUTTON ===== -->
+            <TextView
+                android:id="@+id/sendToDeviceBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Send to Device"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:textAlignment="center"
+                android:background="@drawable/bg_button_primary"
+                android:padding="16dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- ===== STATUS TEXT (changes during connection) ===== -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Waiting for device response..."
+                android:textSize="12sp"
+                android:textColor="#9AA5A3"
+                android:textAlignment="center"
+                android:layout_marginBottom="20dp" />
+
+            <!-- ===== PAIRED DEVICES LIST (if 1+ devices already connected) ===== -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Your Devices"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1A3A50"
+                android:layout_marginBottom="10dp" />
+
+            <!-- Device item card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="44dp"
+                        android:layout_height="44dp"
+                        android:text="📡"
+                        android:textSize="20sp"
+                        android:gravity="center"
+                        android:background="@drawable/bg_device_icon"
+                        android:layout_marginEnd="14dp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Bedroom"
+                            android:textSize="14sp"
+                            android:textStyle="bold"
+                            android:textColor="#1A3A50" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="EHM-001 • Online"
+                            android:textSize="12sp"
+                            android:textColor="#0F6E56" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="8dp"
+                        android:layout_height="8dp"
+                        android:background="@drawable/dot_green" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Add another device button -->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="+ Add Another Device"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#1A6B8A"
+                android:textAlignment="center"
+                android:background="@drawable/bg_button_outline"
+                android:padding="14dp"
+                android:layout_marginBottom="80dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/skipBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="24dp"
+        android:text="Skip"
+        app:icon="@drawable/ic_launcher_foreground"
+        android:textColor="#FFFFFF"
+        app:backgroundTint="#1A6B8A" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
